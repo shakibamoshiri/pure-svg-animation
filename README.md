@@ -44,7 +44,7 @@ Complex:
 <img src="svg/hr.svg" />
 
 <p align="center">
-  <img src="svg/license.svg" />
+  <img src="svg/made-for-you.svg" />
 </p>
 
 <p align="center">
@@ -52,5 +52,5 @@ Complex:
 </p>
 
 <p align="center">
-  <img src="svg/made-for-you.svg" />
+  <img src="svg/license.svg" />
 </p>
