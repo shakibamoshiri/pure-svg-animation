@@ -27,8 +27,8 @@ The big one is try these samples on a **modern** web-browser which not only supp
 
 Simple:  
 
- - radio-button-1: `?s`
- - radio-button-2: `?s`
+ - <a href="https://k-five.github.io/pure-svg-animation/radio-button/radio-button-1.html">radio-button-1</a>: `?s`
+ - <a href="https://k-five.github.io/pure-svg-animation/radio-button/radio-button-2.html">radio-button-2</a>: `?s`
  - buttons: `18s`
  - owl: `19s`
  - draw-UIUX: `20s`
