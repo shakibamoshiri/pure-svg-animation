@@ -44,5 +44,3 @@ Complex:
 <p align="center">
   <img src="svg/license.svg" />
 </p>
-
-MIT
