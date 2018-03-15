@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>radio-button-2</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="radio-button.css">
+
+  </head>
+  <body id="body">
+
+    <div  id="center">
+      <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="500">
+          <!-- <defs> -->
+          <!--   <pattern id="grid100" x="0" y="0" width="10%" height="16.66%"> -->
+          <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+          <!--   </pattern> -->
+          <!-- </defs> -->
+          <!-- <defs> -->
+          <!--   <pattern id="grid25" x="0" y="0" width="2.5%" height="4.16%"> -->
+          <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+          <!--   </pattern> -->
+          <!-- </defs> -->
+
+          <!-- <rect  x="0" y="0" width="1000" height="600" fill="url(#grid25)"> -->
+          <!-- </rect> -->
+          <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="1000" height="600" fill="url(#grid100)"> -->
+          <!-- </rect> -->
+
+          <text x="10" y="90" font-size="50" fill="#FFF">Click/Choose one of these:</text>
+
+          <g id="button1">
+            <path  id="radio1" fill="#AAA" stroke="#FFF"  stroke-width="5" d="M10,150 a40,40 0 1,1 0,01z" >
+              <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+              <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+            </path>
+            <path  id="flower1" visibility="hidden" fill="#FF0" stroke="none" d="M25,125 a25,25 0 1,0 50,0 a25,25 0 1,0 0,50 a25,25 0 1,0 -50,0 a25,25 0 1,0 0,-50z" >
+              <animateTransform id="rotate1" begin="button1.click" end="button2.click;button2.click" attributeName="transform" type="rotate" from="0,50,150" to="360,50,150"
+                                dur="4s" repeatCount="indefinite" />
+            </path>
+
+
+            <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+            <set begin="button1.click" xlink:href="#flower1" attributeType="auto" attributeName="visibility" to="visible" />
+            <set begin="button1.click" xlink:href="#flower2" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button1.click" xlink:href="#flower3" attributeType="auto" attributeName="visibility" to="hidden" />
+
+          </g>
+          <text x="120" y="170" font-size="50" fill="#FFF">HTML</text>
+
+          <g id="button2">
+            <path  id="radio2" fill="#AAA" stroke="#FFF"  stroke-width="5" d="M10,250 a40,40 0 1,1 0,01z" >
+              <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+              <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+            </path>
+            <path  id="flower2" visibility="hidden"  fill="#FF0" stroke="none" d="M25,225 a25,25 0 1,0 50,0 a25,25 0 1,0 0,50 a25,25 0 1,0 -50,0 a25,25 0 1,0 0,-50z" >
+              <animateTransform id="rotate2" begin="button2.click" end="button1.click;button3.click" attributeName="transform" type="rotate" from="0,50,250" to="360,50,250"
+                                dur="4s" repeatCount="indefinite" />
+            </path>
+
+            <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+            <set begin="button2.click" xlink:href="#flower1" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button2.click" xlink:href="#flower2" attributeType="auto" attributeName="visibility" to="visible" />
+            <set begin="button2.click" xlink:href="#flower3" attributeType="auto" attributeName="visibility" to="hidden" />
+
+          </g>
+          <text x="120" y="270" font-size="50" fill="#FFF">CSS</text>
+
+          <g id="button3">
+            <path  id="radio3" fill="#AAA" stroke="#FFF"  stroke-width="5" d="M10,350 a40,40 0 1,1 0,01z" >
+              <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+              <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+            </path>
+            <path  id="flower3" visibility="hidden" fill="#FF0" stroke="none" d="M25,325 a25,25 0 1,0 50,0 a25,25 0 1,0 0,50 a25,25 0 1,0 -50,0 a25,25 0 1,0 0,-50z" >
+              <animateTransform id="rotate3" begin="button3.click" end="button1.click;button2.click" attributeName="transform" type="rotate" from="0,50,350" to="360,50,350"
+                                dur="4s" repeatCount="indefinite" />
+            </path>
+
+            <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+            <set begin="button3.click" xlink:href="#flower1" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button3.click" xlink:href="#flower2" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button3.click" xlink:href="#flower3" attributeType="auto" attributeName="visibility" to="visible" />
+
+          </g>
+          <text x="120" y="370" font-size="50" fill="#FFF">SVG :)</text>
+
+          <text x="10" y="470" font-size="50" fill="#FFF">You chose:
+            <tspan>HTML
+              <animate begin="rotate1.begin" attributeType="auto" attributeName="fill" to="#000" dur="1s" fill="remove"/>
+            </tspan>
+            <tspan>|</tspan>
+            <tspan>CSS
+              <animate begin="rotate2.begin" attributeType="auto" attributeName="fill" to="#000" dur="1s" fill="remove" />
+            </tspan>
+            <tspan>|</tspan>
+            <tspan>SVG
+              <animate begin="rotate3.begin" attributeType="auto" attributeName="fill" to="#000" dur="1s" fill="remove" />
+            </tspan>
+          </text>
+        </svg>
+
+    </div>
+    <br>
+    <hr>
+
+    <p>NOTE that I deliberately made it big so you can see it clearly. For a smaller size see: about-me</p>
+    <p>Just <strong>click</strong> on one of those buttons.</p>
+    <p>Time: ?s</p>
+  </body>
+</html>
