@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>owl</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="owl.css">
+  </head>
+
+  <body id="body">
+
+    <div id="center">
+
+      <svg  fill="#AAA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"  id="owl" viewBox="0 0 500 500">
+
+        <title>pure SVG animation: owl</title>
+        <desc>pure SVG animation: owl</desc>
+
+        <g id="face">
+          <!-- left beak-->
+          <path id="left_beak" stroke="#000" stroke-width="3"  fill="none" stroke-dasharray="56" stroke-dashoffset="56" d="M250,400 225,350">
+            <animate  id="step1" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="1s" fill="freeze" />
+          </path>
+          <!-- right beak-->
+          <path stroke="#000" stroke-width="3"  fill="none" stroke-dasharray="56" stroke-dashoffset="56" d="M250,400 275,350">
+            <animate  attributeType="XML" attributeName="stroke-dashoffset"  begin="step1.begin" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <g id="eyes">
+            <!-- left eye -->
+            <path id="left_eye" stroke="#000" stroke-width="3"  fill="none" stroke-dasharray="628" stroke-dashoffset="628" d="M225,150 a100,100 0 1,0 0,1">
+              <animate id="step2" attributeType="XML" attributeName="stroke-dashoffset"  begin="step1.end" to="0" dur="3s" fill="freeze" />
+              <animate  attributeType="XML" attributeName="fill"  begin="step2.end" from="#AAA" to="#F80" dur="3s" fill="freeze" />
+            </path>
+            <!-- right eye -->
+            <path stroke="#000" stroke-width="3"  fill="none" stroke-dasharray="628" stroke-dashoffset="628" d="M275,150 a100,100 0 1,1 0,1">
+              <animate  attributeType="XML" attributeName="stroke-dashoffset"  begin="step1.end" to="0" dur="3s" fill="freeze" />
+              <animate  attributeType="XML" attributeName="fill"  begin="step2.end" from="#AAA" to="#F80" dur="3s" fill="freeze" />
+            </path>
+          </g>
+
+          <g id="iris">
+            <!-- left iris -->
+            <path id="left_iris" stroke="#000" stroke-width="60" stroke-dasharray="188" stroke-dashoffset="188" d="M155,150 a30,30 0 1,0 0,1">
+              <animate id="step3" attributeType="XML" attributeName="stroke-dashoffset"  begin="step2.end" to="0" dur="3s" fill="freeze" />
+            </path>
+            <!-- right iris -->
+            <path stroke="#000" stroke-width="60" stroke-dasharray="188" stroke-dashoffset="188" d="M345,150 a30,30 0 1,1 0,1">
+              <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="step2.end" to="0" dur="3s" fill="freeze" />
+            </path>
+
+            <g id="pupil">
+              <!-- left pupil -->
+              <path id="left_pupil" stroke-dasharray="0" stroke-dashoffset="0" d="M155,150 a30,30 0 1,0 0,1">
+                <animate id="step4" attributeType="XML" attributeName="fill"  begin="step3.end" to="#FFF" dur="3s" fill="freeze" />
+              </path>
+              <!-- right pupil -->
+              <path  stroke-dasharray="0" stroke-dashoffset="0" d="M405,150 a30,30 0 1,0 0,1">
+                <animate attributeType="XML" attributeName="fill"  begin="step3.end" to="#FFF" dur="3s" fill="freeze" />
+              </path>
+
+              <text x="107" y="160" fill="#000" font-size="30">UX</text>
+              <text x="357" y="160" fill="#000" font-size="30">UI</text>
+
+              <animateTransform id="M4" attributeType="XML" attributeName="transform" type="translate" begin="step4.end+1" from="0,0" to="30,0" dur="2s" fill="freeze"/>
+              <animateTransform id="M5" attributeType="XML" attributeName="transform" type="translate" begin="M4.end+1s" from="30,0" to="-30,0" dur="2s" fill="freeze"/>
+              <animateTransform id="M6" attributeType="XML" attributeName="transform" type="translate" begin="M5.end+1s" from="-30,0" to="0,0" dur="2s" fill="freeze"/>
+            </g>
+
+            <animateTransform id="M4" attributeType="XML" attributeName="transform" type="translate" begin="step4.end+1s" from="0,0" to="35,0" dur="2s" fill="freeze"/>
+            <animateTransform id="M5" attributeType="XML" attributeName="transform" type="translate" begin="M4.end+1s" from="35,0" to="-35,0" dur="2s" fill="freeze"/>
+            <animateTransform id="M6" attributeType="XML" attributeName="transform" type="translate" begin="M5.end+1s" from="-35,0" to="0,0" dur="2s" fill="freeze"/>
+          </g>
+
+          <animateTransform id="M1" attributeType="XML" attributeName="transform" type="rotate" begin="step4.end+1" from="0,250,250" to="45,250,250" dur="2s" fill="freeze"/>
+          <animateTransform id="M2" attributeType="XML" attributeName="transform" type="rotate" begin="M1.end+1s" from="45,250,250" to="-45,250,250" dur="2s" fill="freeze"/>
+          <animateTransform id="M3" attributeType="XML" attributeName="transform" type="rotate" begin="M2.end+1s" from="-45,250,250" to="0,250,250" dur="2s" fill="freeze"/>
+        </g>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="480" stroke-dashoffset="480" d="M10,500 490,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="19s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="480" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <hr>
+
+    <p>For watching it over again <strong>refresh</strong> the page.</p>
+    <p>Time: 19s</p>
+
+</body>
+</html>
