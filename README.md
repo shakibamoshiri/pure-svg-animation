@@ -31,12 +31,12 @@ Simple:
  - <a href="https://k-five.github.io/pure-svg-animation/radio-button/radio-button-2.html" target="_blank">radio-button-2</a>: `?s`
  - buttons: `18s`
  - <a href="https://k-five.github.io/pure-svg-animation/owl/owl.html" target="_blank">owl</a>: `19s`
- - draw-UIUX: `20s`
+ - <a href="https://k-five.github.io/pure-svg-animation/uiux/draw-UIHX.html" target="_blank">draw-UIUX: `20s`
  - typewriter: `21s`
  - fish-and-gull: `27s`
  - circles: `28s`
  - heart2: `43s`
- - <a href="https://k-five.github.io/pure-svg-animation/yin-yang/yin-yang.html" target="_blank">yin-yang: `115s`
+ - <a href="https://k-five.github.io/pure-svg-animation/yin-yang/yin-yang.html" target="_blank">yin-yang</a>: `115s`
 
 Complex:  
 
