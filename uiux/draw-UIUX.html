@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>draw UI and UX</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="draw-UIUX.css">
+
+  </head>
+  <body id="body">
+
+    <div  id="center">
+
+      <svg  fill="#AAA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"  id="owl" viewBox="0 0 500 500">
+
+        <g id="UIUX">
+          <!-- U-->
+          <path id="U" stroke="#FFF" stroke-width="20"  fill="none" linecap="round" stroke-dasharray="489" stroke-dashoffset="489" d="M50,100 V250 a60,60 0 1,0 120,0 v-150">
+            <!-- draw U -->
+            <animate restart="whenNotActive" id="step1" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="3s" fill="freeze" />
+            <animate  id="step1" attributeType="XML" attributeName="stroke-dashoffset"  begin="step8.end" to="489" dur="3s" fill="freeze" />
+          </path>
+
+          <!-- I1 -->
+          <path id="I1" stroke="#FFF" stroke-width="20"  fill="none" stroke-dasharray="210" stroke-dashoffset="210" d="M250,100 250,310">
+            <!-- draw I from top to bottom-->
+            <animate  id="step2" attributeType="XML" attributeName="stroke-dashoffset"  begin="step1.end" to="0" dur="2s" fill="freeze" />
+            <!-- move its position -->
+            <animate  id="step3" attributeType="XML" attributeName="d"  begin="step2.end" to="M250,100 350,310" dur="2s" fill="freeze" />
+            <!-- increase its size -->
+            <animate  id="step4" attributeType="XML" attributeName="stroke-dasharray"  begin="step2.end" to="230" dur="1s" fill="freeze" />
+
+            <!-- move its position -->
+            <animate  id="step5" attributeType="XML" attributeName="d"  begin="step4.end+3" to="M350,100 350,310" dur="2s" fill="freeze" />
+            <!-- decrease its size -->
+            <animate  id="step6" attributeType="XML" attributeName="stroke-dasharray"  begin="step4.end+3" to="210" dur="1s" fill="freeze" />
+
+            <!-- hide this I -->
+            <animate  id="step7" attributeType="XML" attributeName="stroke-dashoffset"  begin="step6.end+1" to="210" dur="0.5s" fill="freeze" />
+
+          </path>
+          <!-- I2 -->
+          <path id="I2" stroke="#FFF" stroke-width="20"  fill="none" stroke-dasharray="210" stroke-dashoffset="210" d="M250,310 250,100 ">
+            <!-- draw I from bottom to top-->
+            <animate  attributeType="XML" attributeName="stroke-dashoffset"  begin="step1.end" to="0" dur="2s" fill="freeze" />
+            <!-- move its position -->
+            <animate  attributeType="XML" attributeName="d"  begin="step2.end" to="M250,310 350,100" dur="2s" fill="freeze" />
+            <!-- increase its size -->
+            <animate  attributeType="XML" attributeName="stroke-dasharray"  begin="step2.end" to="230" dur="1s" fill="freeze" />
+
+            <!-- move its position -->
+            <animate attributeType="XML" attributeName="d"  begin="step4.end+3" to="M350,310 350,100" dur="2s" fill="freeze" />
+            <!-- decrease its size -->
+            <animate attributeType="XML" attributeName="stroke-dasharray"  begin="step4.end+3" to="210" dur="1s" fill="freeze" />
+
+            <!-- fill to #FFF -->
+            <animate attributeType="XML" attributeName="stroke"  begin="step6.end+1" to="#000" dur="1s" fill="freeze" />
+
+            <!-- draw reverse-->
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="step8.begin" to="-210" dur="3s" fill="freeze" />
+          </path>
+
+          <path id="path" stroke="#000" stroke-width="20" fill="none" stroke-dasharray="982" stroke-dashoffset="982"  d="M350,310 350,100 a90,90 0 1,0 -180,0  V250 a60,60 0 1,1 -120,0 V100">
+            <animate id="step8" attributeType="XML" attributeName="stroke-dashoffset"  begin="step7.end+1" to="-492" dur="5s" fill="freeze" />
+            <animate id="step8" attributeType="XML" attributeName="stroke-dashoffset"  begin="step8.end" to="-982" dur="3s" fill="freeze" />
+          </path>
+
+        </g>
+
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="480" stroke-dashoffset="480" d="M10,500 490,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="20s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="480" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <hr>
+
+    <p>For watching it over again <strong>refresh</strong> the page.</p>
+    <p>Time: 20s</p>
+
+</body>
+</html>
