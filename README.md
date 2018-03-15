@@ -4,8 +4,10 @@
 
 <img src="svg/hr.svg" />
 
-SVG animations without CSS nor JS; a silly or maybe crazy idea which came to my mind for some reasons.  
+SVG animations without **CSS** nor **JS**; a silly or maybe crazy idea which came to my mind for some reasons.  
 I am still learning this technology, so you may see (for sure you will see) some mistakes in these samples.  
+
+<img src="svg/hr.svg" />
 
 <p align="center">
   <img src="svg/prerequisite.svg" />
@@ -43,4 +45,12 @@ Complex:
 
 <p align="center">
   <img src="svg/license.svg" />
+</p>
+
+<p align="center">
+  <img src="svg/line-5-500.svg" />
+</p>
+
+<p align="center">
+  <img src="svg/made-for-you.svg" />
 </p>
