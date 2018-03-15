@@ -17,6 +17,31 @@ The big one is try these samples on a **modern** web-browser which not only supp
 <img src="svg/hr.svg" />
 
 <p align="center">
+  <img src="svg/samples.svg" />
+</p>
+
+### In order of their time:  
+
+Simple:  
+
+ - radio-button-1: `?s`
+ - radio-button-2: `?s`
+ - buttons: `18s`
+ - owl: `19s`
+ - draw-UIUX: `20s`
+ - typewriter: `21s`
+ - fish-and-gull: `27s`
+ - circles: `28s`
+ - heart2: `43s`
+ - yin-yang: `115s`
+
+Complex:  
+
+ - about-me
+
+<img src="svg/hr.svg" />
+
+<p align="center">
   <img src="svg/license.svg" />
 </p>
 
