@@ -6,7 +6,7 @@
 
 SVG animations without **CSS** nor **JS**; a silly or maybe crazy idea which came to my mind for some reasons.  
 I am still learning this technology, so you may see (for sure you will see) some mistakes in these samples.  
-Also these SVGs which you see them here, are made by: <a href="https://github.com/k-five/badge-for-git">badge-for-git</a>.
+Also these SVGs which you see them here, are/was made/created by: <a href="https://github.com/k-five/badge-for-git">badge-for-git</a>.
 
 <img src="svg/hr.svg" />
 
@@ -45,17 +45,25 @@ Complex:
 <img src="svg/hr.svg" />
 
 <p align="center">
-  <img src="svg/made-for-you.svg" />
+  <a href="https://github.com/k-five/badge-for-git">
+    <img src="svg/made-for-you.svg" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="svg/line-5-500.svg" />
+  <a href="https://github.com/k-five/badge-for-git">
+    <img src="svg/line-5-500.svg" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="svg/license.svg" />
+  <a href="https://github.com/k-five/pure-svg-animation/blob/master/LICENSE">
+    <img src="svg/license.svg" />
+  </a>
 </p>
 
 <p align="center">
-  <img src="svg/MIT.svg" />
+  <a href="https://github.com/k-five/pure-svg-animation/blob/master/LICENSE">
+    <img src="svg/MIT.svg" />
+  </a>
 </p>
