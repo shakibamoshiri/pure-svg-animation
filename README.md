@@ -6,7 +6,7 @@
 
 SVG animations without **CSS** nor **JS**; a silly or maybe crazy idea which came to my mind for some reasons.  
 I am still learning this technology, so you may see (for sure you will see) some mistakes in these samples.  
-Also these SVGs which you see them here, are/was made/created by: <a href="https://github.com/k-five/badge-for-git">badge-for-git</a>.
+Also these SVGs which you see them here, have been created using: <a href="https://github.com/k-five/badge-for-git">badge-for-git</a>.
 
 <img src="svg/hr.svg" />
 
