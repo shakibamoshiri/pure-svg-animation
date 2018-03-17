@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>fish and gull</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="fish-and-gull.css">
+  </head>
+
+  <body id="body">
+
+    <div  id="center">
+
+      <svg  fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="500"  id="owl" viewBox="0 0 700 500">
+
+        <title>pure SVG animation: fish and gull</title>
+        <desc>pure SVG animation: fill and gull</desc>
+
+        <defs>
+          <pattern id="grid" x="0" y="0" width="3.57%" height="5%">
+            <!-- <path id="body" fill="none" stroke="#000" stroke-width="0.5" d="M0,10 10,10 10,0" /> -->
+            <!-- <path id="body" fill="none" stroke="#000" stroke-width="0.5" d="M0,50 50,50 50,0" /> -->
+            <path id="body" fill="none" stroke="#000" stroke-width="0.5" d="M0,25 25,25 25,0" />
+            <!-- <path id="body" fill="none" stroke="#000" stroke-width="1"  fill="none" linecap="round" stroke-dasharray="0" stroke-dashoffset="0" d="M9,10 10,10" /> -->
+
+          </pattern>
+        </defs>
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="0.5" width="700" height="500" fill="url(#grid)"> -->
+        <!-- </rect> -->
+
+
+        <g id="gull">
+          <path id="left_wing" stroke="#FFF" stroke-width="3" d="M0,0 -50,-50 -150,0" >
+            <animateTransform  attributeType="XML" attributeName="transform" type="rotate"
+                               values="0,0,0; 30,0,0; 0,0,0" dur="1" calcMode="linear" repeatCount="indefinite"/>
+          </path>
+          <path id="right_wing" stroke="#FFF" stroke-width="3"  d="M0,0 50,-50 150,0" >
+            <animateTransform attributeType="XML" attributeName="transform" type="rotate"
+                              values="0,0,0; -30,0,0; 0,0,0" dur="1" calcMode="linear" repeatCount="indefinite"/>
+          </path>
+          <animateMotion  begin="wave.end" dur="10s" repeatCount="2" rotate="auto" > <mpath xlink:href="#gull_path"/> </animateMotion>
+        </g>
+
+        <g id="river">
+
+          <!-- water -->
+          <path id="water" stroke="#0AF" stroke-width="10" stroke-dasharray="1257" stroke-dashoffset="1257"
+                d="M-50,400 a50,50 0 1,1 100,0 a50,50 0 1,1 100,0 a50,50 0 1,1 100,0 a50,50 0 1,1 100,0 a50,50 0 1,1 100,0  a50,50 0 1,1 100,0 a50,50 0 1,1 100,0 a50,50 0 1,1 100,0">
+            <animateTransform id="left" attributeType="XML" attributeName="transform" type="translate" begin="1"  values="-50,0; 0,0; 50,0; -50,0" dur="3s" calcMode="linear" repeatCount="indefinite"/>
+            <animate id="wave" attributeType="XML" attributeName="stroke-dasharray"  begin="play.click" to="3" dur="4s" fill="freeze" />
+            <animate attributeType="XML" attributeName="stroke-dasharray"  begin="fish_jump.end" to="1257" dur="4s" fill="freeze" />
+          </path>
+
+          <g id="fish" transform="translate(-40,-40)">
+            <polygon id="tail" points="50,25 25,37.5 25,12.5" stroke="#CB0000" stroke-width="1" fill="#FFF" >
+              <animateTransform attributeType="XML" attributeName="transform" type="rotate"
+                                values="0,50,25; 30,50,25; 0,50,25; -30,50,25; 0,50,25" dur="1" calcMode="linear" repeatCount="indefinite"/>
+            </polygon>
+            <polygon id="body" points="50,25 75,12.5 100,25 75,37.5"  stroke="#FFF" stroke-width="1" fill="#CB0000" />
+            <animateMotion id="fish_jump" dur="6s" repeatCount="3" rotate="auto" begin="wave.end+1">
+              <mpath xlink:href="#fish_path"/>
+            </animateMotion>
+
+          </g>
+
+          <path id="fish_path" stroke="none" d="M150,550 a200,200 0 1,1 380,0" />
+          <path id="gull_path" stroke="none" d="M0,-150 a350,350 0 1,0 700,0" />
+
+          <g id="play">
+            <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+              <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+              <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+              <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+              <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+            </path>
+          </g>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="680" stroke-dashoffset="680" d="M10,500 690,500">
+            <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="27s" fill="freeze" />
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="680" dur="1s" fill="freeze" />
+          </path>
+
+        </g>
+
+      </svg>
+
+    </div>
+    <br>
+    <hr>
+
+    <p>For watching it over again click the <strong>play</strong> button.</p>
+    <p>Time: 27s</p>
+
+</body>
+</html>
