@@ -29,7 +29,7 @@ Simple:
 
  - <a href="https://k-five.github.io/pure-svg-animation/radio-button/radio-button-1.html" target="_blank">radio-button-1</a>: `?s`
  - <a href="https://k-five.github.io/pure-svg-animation/radio-button/radio-button-2.html" target="_blank">radio-button-2</a>: `?s`
- - buttons: `18s`
+ - <a href="https://k-five.github.io/pure-svg-animation/buttons/buttons.html" target="_blank">buttons</a>: `18s`
  - <a href="https://k-five.github.io/pure-svg-animation/owl/owl.html" target="_blank">owl</a>: `19s`
  - <a href="https://k-five.github.io/pure-svg-animation/uiux/draw-UIUX.html" target="_blank">draw-UIUX</a>: `20s`
  - typewriter: `21s`

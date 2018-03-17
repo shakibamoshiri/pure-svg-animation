@@ -1,0 +1,178 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>buttons</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="buttons.css">
+  </head>
+
+  <body id="body">
+
+    <div  id="center">
+
+      <svg  fill="#AAA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="750" height="400"  id="svg" viewBox="-5 5 760 390">
+
+        <title>pure SVG animation: buttons</title>
+        <desc>pure SVG animation: buttons</desc>
+
+        <path stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="50" stroke-dashoffset="50" d="M0,100 50,100">
+          <animate begin="play.click" restart="whenNotActive" id="L1" attributeType="XML" attributeName="stroke-dashoffset"  begin="0" to="0" dur="1s" fill="freeze" />
+          <animate id="H1" attributeType="XML" attributeName="stroke-width"  begin="L5.end" to="0" dur="1s" fill="freeze" />
+        </path>
+        <g id="button1">
+
+          <path id="A" stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M50,100 75,75 150,75 175,100">
+            <animate id="A1" attributeType="XML" attributeName="stroke-dashoffset" begin="L1.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate id="click1" attributeType="XML" attributeName="fill"  begin="button1.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button1.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M1.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M50,100 75,125 150,125 175,100">
+            <animate id="A2" attributeType="XML" attributeName="stroke-dashoffset" begin="L1.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button1.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button1.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M1.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <text x="100" y="120" fill="#AAA" font-size="50">U
+          <animate attributeType="XML" attributeName="fill"  begin="A1.end" to="#000" dur="1s" fill="freeze" />
+          <animateTransform id="M1" attributeType="XML" attributeName="transform" type="translate" begin="button1.click" from="0,0" to="150,200" dur="2s" fill="freeze"/>
+        </text>
+
+
+        <path stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="50" stroke-dashoffset="50" d="M175,100 225,100">
+          <animate id="L2" attributeType="XML" attributeName="stroke-dashoffset"  begin="A1.end" to="0" dur="1s" fill="freeze" />
+          <animate id="H2" attributeType="XML" attributeName="stroke-width"  begin="H1.end" to="0" dur="1s" fill="freeze" />
+        </path>
+        <g id="button2">
+          <path id="B" stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M225,100 250,75 325,75 350,100">
+            <animate id="B1" attributeType="XML" attributeName="stroke-dashoffset" begin="L2.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button2.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button2.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M2.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M225,100 250,125 325,125 350,100">
+            <animate id="B2" attributeType="XML" attributeName="stroke-dashoffset" begin="L2.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button2.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button2.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M2.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <text x="275" y="120" font-size="50">I
+          <animate attributeType="XML" attributeName="fill"  begin="B1.end" to="#000" dur="1s" fill="freeze" />
+          <animateTransform id="M2" attributeType="XML" attributeName="transform" type="translate" begin="button2.click" from="0,0" to="0,200" dur="2s" fill="freeze"/>
+        </text>
+
+
+        <path stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="50" stroke-dashoffset="50" d="M350,100 400,100">
+          <animate id="L3" attributeType="XML" attributeName="stroke-dashoffset"  begin="B1.end" to="0" dur="1s" fill="freeze" />
+          <animate id="H3" attributeType="XML" attributeName="stroke-width"  begin="H2.end" to="0" dur="1s" fill="freeze" />
+        </path>
+        <g id="button3">
+
+          <path id="C" stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M400,100 425,75 500,75 525,100">
+            <animate id="C1" attributeType="XML" attributeName="stroke-dashoffset" begin="L3.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button3.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button3.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M3.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="B" stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M400,100 425,125 500,125 525,100">
+            <animate id="C2" attributeType="XML" attributeName="stroke-dashoffset" begin="L3.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button3.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button3.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M3.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <text x="450" y="120" font-size="50">U
+          <animate attributeType="XML" attributeName="fill"  begin="C1.end" to="#000" dur="1s" fill="freeze" />
+          <animateTransform id="M3" attributeType="XML" attributeName="transform" type="translate" begin="button3.click" from="0,0" to="0,200" dur="2s" fill="freeze"/>
+        </text>
+
+
+        <path stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="50" stroke-dashoffset="50" d="M525,100 575,100">
+          <animate id="L4" attributeType="XML" attributeName="stroke-dashoffset"  begin="C1.end" to="0" dur="1s" fill="freeze" />
+          <animate id="H4" attributeType="XML" attributeName="stroke-width"  begin="H3.end" to="0" dur="1s" fill="freeze" />
+        </path>
+        <g id="button4">
+
+          <path id="D" stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M575,100 600,75 675,75 700,100">
+            <animate id="D1" attributeType="XML" attributeName="stroke-dashoffset" begin="L4.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button4.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button4.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M4.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="3" stroke-dasharray="146" stroke-dashoffset="146" d="M575,100 600,125 675,125 700,100">
+            <animate id="D2" attributeType="XML" attributeName="stroke-dashoffset" begin="L4.end" to="0" dur="2s" fill="freeze" />
+            <!--simulate :hover-->
+            <animate attributeType="XML" attributeName="fill"  begin="button4.mouseover" to="#88F" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill"  begin="button4.mouseout" to="#AAA" dur="0.5s" fill="freeze" />
+            <!--hide button-->
+            <animate attributeType="XML" attributeName="stroke-width"  begin="M4.begin+1" to="0" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+
+        <text x="625" y="120" font-size="50">X
+          <animate attributeType="XML" attributeName="fill"  begin="D1.end" to="#000" dur="1s" fill="freeze" />
+          <animateTransform id="M4" attributeType="XML" attributeName="transform" type="translate" begin="button4.click" from="0,0" to="-150,200" dur="2s" fill="freeze"/>
+        </text>
+
+
+        <path stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="50" stroke-dashoffset="50" d="M700,100 750,100">
+          <animate id="L5" attributeType="XML" attributeName="stroke-dashoffset"  begin="D1.end" to="0" dur="1s" fill="freeze" />
+          <animate  attributeType="XML" attributeName="stroke-width"  begin="H4.end" to="0" dur="1s" fill="freeze" />
+        </path>
+
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,350 40,370 10,390 10,350 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="730" stroke-dashoffset="730" d="M10,400 740,400">
+          <animate restart="whenNotActive" id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="18s" fill="freeze" />
+          <animate  attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="730" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <hr>
+
+    <p>After the animation was finished (= drawing) click on each button</p>
+    <p>For watching it over again <strong>refresh</strong> the page.</p>
+    <p>Time: 18s</p>
+
+  </body>
+</html>
