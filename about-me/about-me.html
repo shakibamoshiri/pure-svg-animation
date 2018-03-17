@@ -1,0 +1,325 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>about-me</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="about-me.css">
+
+  </head>
+  <body id="body">
+
+    <!--  using flex-box for centralizing our svg -->
+    <div id="center">
+
+      <!--  starting of the single SVG  -->
+      <svg fill="none" font-family="DejaVu Sans Mono, Source code variable, monospace" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="500">
+
+        <title>pure SVG animation: about-me</title>
+        <desc>pure SVG animation: about-me</desc>
+
+        <!-- define two grids -->
+        <defs>
+          <pattern id="grid100" x="0" y="0" width="14.28%" height="20%">
+            <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" />
+          </pattern>
+        </defs>
+        <defs>
+          <pattern id="grid25" x="0" y="0" width="3.57%" height="5%">
+            <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" />
+          </pattern>
+        </defs>
+
+        <!-- draw grids -->
+        <!-- <rect  x="0" y="0" width="700" height="500" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="700" height="500" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+
+        <!-- **************************************************************** -->
+        <!-- This is a pure-SVG-animation without any CSS or JavaScript       -->
+        <!-- It has 700px width and 500px height                              -->
+        <!-- I tired to use almost all features in SVG-1.1 specification      -->
+        <!--   -->
+        <!-- Other examples of pure-SVG-animation are available on my github  -->
+        <!--   -->
+        <!-- pure-svg-animation copyright (C) 2018 Shakiba.Moshiri            -->
+        <!-- **************************************************************** -->
+
+        <!-- appear a line -->
+        <path id="line" stroke="#CB0000" stroke-width="0"  d="M160,270 500,270">
+          <animate id="step9" begin="step8.end" attributeType="auto" attributeName="stroke-width" to="3" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- these four items are appeared after drawing 4 circles for radio-buttons -->
+        <text fill="#000" fill-opacity="0" x="275" y="325" font-size="20">Email
+          <animate  id="step14" begin="step13.end" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+        </text>
+
+        <text fill="#000" fill-opacity="0" x="275" y="354" font-size="20">Phone
+          <animate  id="step15" begin="step14.end" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+        </text>
+
+        <text fill="#000" fill-opacity="0" x="275" y="383" font-size="20">Github
+          <animate  id="step16" begin="step15.end" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+        </text>
+
+        <text fill="#000" fill-opacity="0" x="275" y="414" font-size="20">StackOverflow
+          <animate  id="step17" begin="step16.end" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+        </text>
+
+        <!-- four buttons (= radio-button -->
+        <g id="button1">
+          <path id="radio1" fill="#AAA" stroke="#FFF" stroke-width="2" stroke-dasharray="70" stroke-dashoffset="70" d="M225,312 a11,11 0 1,1 0,1z">
+            <animate  id="step10" begin="step9.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+            <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+          </path>
+
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <set begin="button1.click" xlink:href="#bullet" attributeType="auto" attributeName="cy" to="312.5" />
+        </g>
+
+        <g id="button2">
+          <path id="radio2" fill="#AAA" stroke="#FFF" stroke-width="2" stroke-dasharray="70" stroke-dashoffset="70" d="M225,342 a11,11 0 1,1 0,1z">
+            <animate  id="step11" begin="step10.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+            <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+          </path>
+
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <set begin="button2.click" xlink:href="#bullet" attributeType="auto" attributeName="cy" to="342.5" />
+        </g>
+
+        <g id="button3">
+          <path id="radio3" fill="#AAA" stroke="#FFF" stroke-width="2" stroke-dasharray="70" stroke-dashoffset="70" d="M225,372 a11,11 0 1,1 0,1z">
+            <animate  id="step12" begin="step11.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+            <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+          </path>
+
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <set begin="button3.click" xlink:href="#bullet" attributeType="auto" attributeName="cy" to="372.5" />
+        </g>
+
+        <g id="button4">
+          <path id="radio4" fill="#AAA"  stroke="#FFF" stroke-width="2" stroke-dasharray="70" stroke-dashoffset="70" d="M225,402 a11,11 0 1,1 0,1z">
+            <animate  id="step13" begin="step12.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+            <animate begin="mouseover" attributeType="auto" attributeName="stroke" to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate begin="mouseout" attributeType="auto" attributeName="stroke" to="#FFF" dur="0.5s" fill="freeze" />
+          </path>
+
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <set begin="button4.click" xlink:href="#bullet" attributeType="auto" attributeName="cy" to="402.5" />
+        </g>
+
+        <!--  four items which each is appeared when a user click on a radio-button -->
+        <g id="contact">
+          <text id="c1" fill="#FFF" visibility="hidden" x="275" y="480" font-size="20">shakiba.moshiri<tspan fill="#FF0">@</tspan>yahoo.com
+            <set begin="button1.click" xlink:href="#c1" attributeType="auto" attributeName="visibility" to="visible" />
+            <set begin="button1.click" xlink:href="#c2" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button1.click" xlink:href="#c3" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button1.click" xlink:href="#c4" attributeType="auto" attributeName="visibility" to="hidden" />
+          </text>
+
+          <text id="c2" fill="#FFF" visibility="hidden" x="275" y="480" font-size="20">+98 937 094 <tspan fill="#FF0">7008</tspan>
+            <set begin="button2.click" xlink:href="#c1" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button2.click" xlink:href="#c2" attributeType="auto" attributeName="visibility" to="visible" />
+            <set begin="button2.click" xlink:href="#c3" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button2.click" xlink:href="#c4" attributeType="auto" attributeName="visibility" to="hidden" />
+          </text>
+
+          <text id="c3" fill="#00F" visibility="hidden" x="275" y="480" font-size="20"><a xlink:href="https://github.com/k-five">link-1</a>
+            <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+            <set begin="button3.click" xlink:href="#c1" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button3.click" xlink:href="#c2" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button3.click" xlink:href="#c3" attributeType="auto" attributeName="visibility" to="visible" />
+            <set begin="button3.click" xlink:href="#c4" attributeType="auto" attributeName="visibility" to="hidden" />
+          </text>
+
+          <text id="c4" fill="#00F" visibility="hidden" x="275" y="480" font-size="20"><a xlink:href="https://stackoverflow.com/users/4643584/shakiba-moshiri">link-2</a>
+            <set begin="button4.click" xlink:href="#c1" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+            <set begin="button4.click" xlink:href="#c2" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button4.click" xlink:href="#c3" attributeType="auto" attributeName="visibility" to="hidden" />
+            <set begin="button4.click" xlink:href="#c4" attributeType="auto" attributeName="visibility" to="visible" />
+          </text>
+        </g>
+
+        <!-- draw the beginning of skill-and-resume button  -->
+        <path stroke="#CB0000" stroke-dasharray="100" stroke-dashoffset="100" stroke-width="3" d="M0,100 100,100">
+          <animate id="step18" begin="step17.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+
+          <animate id="step23" begin="step22.end" attributeType="auto" attributeName="stroke-width" to="0" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- draw top-half and bottom-half of the skill button  -->
+        <g id="skill" fill="#AAA">
+          <path id="first" stroke="#CB0000" stroke-dasharray="179" stroke-dashoffset="179" stroke-width="3" d="M100,100 a25,25 0 0,1 25,-25 l100,0 a25,25 0 0,1 25,25">
+            <animate id="step19" begin="step18.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="2s" fill="freeze" />
+          </path>
+          <path stroke="#CB0000" stroke-dasharray="179" stroke-dashoffset="179" stroke-width="3" d="M100,100 a25,25 0 0,0 25,25 l100,0 a25,25 0 0,0 25,-25" >
+            <animate begin="step18.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="2s" fill="freeze" />
+          </path>
+
+          <set begin="skill.mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+
+          <!-- <animate begin="skill.mouseover" xlink:href="#skill" attributeType="auto" attributeName="stroke" from="CB0000" to="#FFF" dur="1s" fill="freeze" /> -->
+          <!-- <animate begin="skill.mouseout" xlink:href="#skill" attributeType="auto" attributeName="stroke" from="#FFF" to="#CB0000" dur="1s" fill="freeze" /> -->
+
+          <text id="S" fill="#000" fill-opacity="0" x="120" y="107" font-size="23" letter-spacing="10px" >skill
+            <animate begin="step19.end+1" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+
+            <animate begin="mouseover" attributeType="auto" attributeName="fill" from="#AAA" to="#FFF" dur="1s" fill="freeze" />
+            <animate begin="mouseout" attributeType="auto" attributeName="fill" from="#FFF" to="#000" dur="1s" fill="freeze" />
+          </text>
+        </g>
+
+        <!-- draw line between the two buttons (= skill and resume) -->
+        <path stroke="#CB0000" stroke-dasharray="150" stroke-dashoffset="150" stroke-width="3" d="M250,100 l150,0">
+          <animate id="step20" begin="step19.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+
+          <animate id="step24" begin="step23.end" attributeType="auto" attributeName="stroke-width" to="0" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- draw top-half and bottom-half of the resume button  -->
+        <g id="resume" fill="#AAA">
+          <path stroke="#CB0000" stroke-dasharray="179" stroke-dashoffset="179" stroke-width="3" d="M400,100 a25,25 0 0,1 25,-25 l100,0 a25,25 0 0,1 25,25" >
+            <animate id="step21" begin="step20.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="2s" fill="freeze" />
+          </path>
+          <path stroke="#CB0000" stroke-dasharray="179" stroke-dashoffset="179" stroke-width="3" d="M400,100 a25,25 0 0,0 25,25 l100,0 a25,25 0 0,0 25,-25" >
+            <animate begin="step20.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="2s" fill="freeze" />
+          </path>
+
+          <set begin="resume.mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <!-- <animate begin="resume.mouseover" attributeType="auto" attributeName="fill" from="#AAA" to="#CBCB00" dur="1s" fill="freeze" /> -->
+          <!-- <animate begin="resume.mouseout"  attributeType="auto" attributeName="fill" from="#CB0000" to="#AAA" dur="1s" fill="freeze" /> -->
+
+          <text fill="#000" fill-opacity="0" x="418" y="105" font-size="23" letter-spacing="7px" >resume
+            <animate begin="step21.end+1" attributeType="auto" attributeName="fill-opacity" to="1" dur="1s" fill="freeze" />
+
+            <animate begin="mouseover" attributeType="auto" attributeName="fill" from="#000" to="#FFF" dur="1s" fill="freeze" />
+            <animate begin="mouseout"  attributeType="auto" attributeName="fill" from="#FFF" to="#000" dur="1s" fill="freeze" />
+          </text>
+        </g>
+
+        <!-- draw the tailing line  -->
+        <path stroke="#CB0000" stroke-dasharray="75" stroke-dashoffset="75" stroke-width="3" d="M550,100  l75,0" >
+          <animate id="step22" begin="step21.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="1s" fill="freeze" />
+
+          <animate id="step25" begin="step24.end" attributeType="auto" attributeName="stroke-width" to="0" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- this part is for simulating typewriter -->
+
+        <!-- char-height: 26 -->
+        <!-- char-width : 13 -->
+        <!-- font-size  : 23 -->
+        <!-- <text id="t1" x="100" y="90" font-family="monospace"; font-size="40" fill="#FFF">How are <tspan fill="#FF0">you</tspan> today?</text> -->
+        <!-- <text fill="#000"  x="222" y="240" font-size="23">Shakiba.Moshiri -->
+        <!--     <set id="set31"   begin="set21.begin+0.10" attributeType="auto" attributeName="visibility" to="hidden"/> -->
+        <!-- </text> -->
+
+        <!-- 28 letters -->
+        <!-- for Firefox it should be N+1 -->
+        <text fill="#000" x="222" y="240" font-family="DejaVu Sans Mono, Source code variable, monospace" font-size="23" visibility="hidden" >I have no skills whatsoever!
+          <set id="set41"  begin="set21.begin+0.10" attributeType="auto" attributeName="visibility" to="visible" />
+          <set id="set42"  begin="set22.begin+0.10" attributeType="auto" attributeName="visibility" to="hidden" />
+        </text>
+
+        <!-- 17 letters -->
+        <!-- for Firefox it should N+1 -->
+        <text fill="#000" x="222" y="240" font-family="DejaVu Sans Mono, Source code variable, monospace" font-size="23" visibility="hidden" >Oh no resume either!
+          <set id="set51"  begin="set21.begin+0.10" attributeType="auto" attributeName="visibility" to="hidden" />
+          <set id="set51"  begin="set22.begin+0.10" attributeType="auto" attributeName="visibility" to="visible" />
+        </text>
+
+        <!-- simulate a text-cursor motion -->
+        <g id="cursor">
+          <rect x="432" y="214" width="13" height="26" fill="#FF0" visibility="hidden">
+            <set              begin="step25.end" attributeType="auto" attributeName="visibility" to="visible" />
+            <animate id="blink1" begin="step25.end+1; move1.end; move3.end" attributeType="auto" attributeName="fill" end="skill.click; resume.click" to="#AAA"
+                     dur="0.5s" repeatCount="indefinite" />
+            <set id="set11"   begin="skill.click" attributeType="auto" attributeName="x" to="222" fill="freeze" />
+            <set id="set12"   begin="resume.click" attributeType="auto" attributeName="x" to="222" fill="freeze" />
+
+          </rect>
+
+          <!-- changing the width of this rectangle from ??? to ??? has a strange result -->
+          <!-- and I could NOT understand why! -->
+          <rect x="445" y="214" width="390" height="26" fill="#AAA">
+            <set id="set21"   begin="skill.click" attributeType="auto" attributeName="x" to="235" fill="freeze" />
+            <set id="set22"   begin="resume.click" attributeType="auto" attributeName="x" to="235" fill="freeze" />
+          </rect>
+
+          <!-- move the cursor to the right  -->
+          <animateTransform id="move1"  restart="whenNotActive" begin="set41.begin+0.10" attributeName="transform" type="translate" from="0,0" to="13,0"
+                            dur="0.10s" accumulate="sum" calcMode="discrete" repeatCount="30"  fill="freeze" />
+
+          <!-- move back to the left -->
+          <animateTransform id="move2" begin="set12.begin+0.10" attributeName="transform" type="translate" to="0,0"  dur="0.10s" fill="freeze" />
+
+          <!-- move the cursor to the right -->
+          <animateTransform id="move3" restart="whenNotActive" begin="move2.end" attributeName="transform" type="translate" from="0,0" to="13,0"
+                            dur="0.10s" accumulate="sum" calcMode="discrete" repeatCount="21"  fill="freeze" />
+        </g>
+
+        <!-- draw my name on a path -->
+        <!--  It has two parts: -->
+        <!--      the two first letters: Sh and -->
+        <!--      the rest: aliba.Moshiri -->
+        <g id="name" >
+          <text fill="#FF0" font-family="monospace" font-size="23">
+            <textPath startOffset="100%"  xlink:href="#h2">
+              akiba.Moshiri
+              <animate id="step3" begin="step2.end" attributeType="auto" attributeName="startOffset" to="0%" from="100%" dur="5s" fill="freeze" />
+            </textPath>
+            <animateTransform id="step5" begin="step4.end" attributeName="transform" type="rotate" from="0,425,225" to="-90,425,225"  dur="3s"  fill="freeze" />
+            <animate id="step7" begin="step5.begin+2" attributeType="auto" attributeName="fill" from="#FFF" to="#000" dur="3s" fill="freeze" />
+
+            <set id="set31"   begin="set21.begin+0.10; set22.begin+0.10" attributeType="auto" attributeName="visibility" to="hidden"/>
+          </text>
+
+          <text fill="#FFF" fill-opacity="0" x="222" y="240" font-size="23" font-family="monospace" >Sh
+            <set begin="step5.end+1" attributeType="auto" attributeName="visibility" to="visible" />
+            <animate id="step6" begin="step5.end" attributeType="auto" attributeName="fill-opacity" to="1" dur="2s" fill="freeze" />
+
+            <set id="set31"   begin="set21.begin+0.10; set22.begin+0.10" attributeType="auto" attributeName="visibility" to="hidden"/>
+          </text>
+
+          <animate id="step8" begin="step6.end" attributeType="auto" attributeName="fill" to="#F00" dur="1s" fill="freeze" />
+        </g>
+
+        <!-- this part draws "S" and "h" letters and it should be over all other elements -->
+        <path id="s" stroke="#FFF" stroke-dasharray="766" stroke-dashoffset="766" stroke-width="5" d="M300,100 a100,75 0 1,0 -100,100 a100,75 0 1,1 -100,100" >
+          <animate begin="2s" id="step1" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="5s" fill="freeze" />
+          <animate  begin="step3.end" attributeType="auto" attributeName="stroke-dashoffset" to="766" dur="5s" fill="freeze" />
+        </path>
+        <path id="h" stroke="#FFF" stroke-dasharray="715" stroke-dashoffset="715" stroke-width="5" d="M400,50 400,350 400,300 a100,100 0 1,1 200,0 v50" >
+          <animate id="step2" begin="step1.end" attributeType="auto" attributeName="stroke-dashoffset" to="0" dur="5s" fill="freeze" />
+          <animate  id="step4" begin="step3.end" attributeType="auto" attributeName="stroke-dashoffset" to="715" dur="5s" fill="freeze" />
+        </path>
+        <path id="h2" stroke="none"  d="M410,50 410,350 410,300 a100,100 0 1,1 200,0 v50" ></path>
+
+        <!-- this circle is for filling radio-buttons. It is out of height (=500px) and appears when a user click on a radio-button -->
+        <circle id="bullet" fill="#FF0" cx="236" cy="518" r="7">
+          <!-- <animateTransform attributeName="transform" type="rotate" from="0,236,313" to="360,236,313"  dur="1s" repeatCount="indefinite" /> -->
+        </circle>
+
+        <!--  end of the svg -->
+      </svg>
+
+      <div id="footer">
+        <hr>
+        <p>k-five.ir copyleft <span id="copyright">&copy;</span> <span style="color: #000;">Sh</span>akiba.Moshiri 2018 <sup><a href="https://github.com/k-five/pure-svg-animation">src</a></sup></p>
+      </div>
+
+    </div>
+
+  </body>
+</html>
