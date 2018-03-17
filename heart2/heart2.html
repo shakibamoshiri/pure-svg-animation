@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>heart2</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="heart2.css">
+  </head>
+
+  <body id="body">
+
+    <div  id="center">
+
+      <svg fill="none" fill="#AAA" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600">
+
+        <title>pure SVG animation: heart2</title>
+        <desc>pure SVG animation: heart2</desc>
+
+        <!-- <defs> -->
+        <!--   <pattern id="grid100" x="0" y="0" width="16.66%" height="16.66%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+        <!-- <defs> -->
+        <!--   <pattern id="grid25" x="0" y="0" width="4.16%" height="4.16%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+
+        <!-- <rect  x="0" y="0" width="600" height="600" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="600" height="600" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+
+        <path id="heart2" stroke="#FFF" stroke-dasharray="1434" stroke-dashoffset="1434" stroke-width="5" d="M300,500 q-300,-250 -200,-400 q100,-100 200,0 q100,-100 200,0 q100,150 -200,400z">
+          <animate restart="whenNotActive" id="step1" begin="play.click" attributeName="stroke-dasharray" to="0" dur="10s" fill="freeze" />
+          <animate id="step2" begin="step1.end" attributeName="fill" from="#AAA" to="#CB0000" dur="2s" repeatCount="indefinite" />
+          <animate id="step3" begin="step2.repeat(1)" attributeName="stroke-dasharray" to="717" dur="3s" fill="freeze" />
+          <animate id="step4" begin="step3.end+2" attributeName="stroke-dashoffset" to="717" dur="3s" fill="freeze" />
+          <animate id="step5" begin="step4.end+2" attributeName="stroke-dashoffset" to="0" dur="3s" fill="freeze" />
+          <animate id="step6" begin="step5.end+2" attributeName="stroke-dasharray" to="0" dur="5s" fill="freeze" />
+
+          <animate id="step7" begin="step6.end" attributeName="fill"  from="#CB0000" to="#AAA" dur="2s" fill="freeze" />
+          <animate id="step8" begin="step7.end+1" attributeName="stroke-dasharray" to="1434" dur="3s" fill="freeze" />
+          <animate id="step9" begin="step8.end+1" attributeName="stroke-dashoffset" to="1434" dur="3s" fill="freeze" />
+        </path>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,550 40,570 10,590 10,550 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+          <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="580" stroke-dashoffset="580" d="M10,600 590,600">
+            <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="43s" fill="freeze" />
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="580" dur="1s" fill="freeze" />
+          </path>
+        </g>
+
+      </svg>
+    </div>
+
+    <br>
+    <hr>
+    <p>For watching it over again click the <strong>play</strong> button.</p>
+    <p>Time: 43s</p>
+
+  </body>
+</html>
