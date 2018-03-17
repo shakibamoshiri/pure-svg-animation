@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>typewriter</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="typewriter.css">
+  </head>
+
+  <body id="body">
+
+    <div  id="center">
+      <svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="400">
+
+        <title>pure SVG animation: typewriter</title>
+        <desc>pure SVG animation: typewriter</desc>
+
+        <!-- <defs> -->
+        <!--   <pattern id="grid100" x="0" y="0" width="11.11%" height="25%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+        <!-- <defs> -->
+        <!--   <pattern id="grid25" x="0" y="0" width="2.77%" height="6.25%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+
+        <!-- <rect  x="0" y="0" width="900" height="400" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="900" height="400" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+
+
+        <text id="t1" x="100" y="90" font-family="monospace"; font-size="40" fill="#FFF">How are <tspan fill="#FF0">you</tspan> today?</text>
+        <text id="t2"  visibility="hidden"  x="100" y="190" font-family="monospace"; font-size="40" fill="#FFF"><tspan fill="#FF0">I</tspan> am fine, how about <tspan fill="#CB0000">you</tspan>?
+          <set id="set31" begin="move2.end" attributeType="auto" attributeName="visibility" to="visible" />
+          <!-- hide for the next iteration -->
+          <set id="set32" begin="move6.end" attributeType="auto" attributeName="visibility" to="hidden" />
+        </text>
+        <text id="t3"  visibility="hidden"  x="100" y="290" font-family="monospace"; font-size="40" fill="#FFF">Great. Let's go to ...
+          <set id="set41" begin="move4.end" attributeType="auto" attributeName="visibility" to="visible" />
+          <!-- hide for the next iteration -->
+          <set id="set42" begin="move6.end" attributeType="auto" attributeName="visibility" to="hidden" />
+        </text>
+
+        <g id="cursor">
+          <rect x="100" y="40" width="24" height="60" fill="#000">
+            <!-- starting point of the animation -->
+            <animate id="blink1" begin="1; move6.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <animate id="blink2" begin="move1.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <animate id="blink3" begin="move2.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <animate id="blink4" begin="move3.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <animate id="blink5" begin="move4.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <animate id="blink6" begin="move5.end" attributeType="auto" attributeName="fill" to="#AAA" dur="0.5s" repeatCount="5" />
+            <!-- set the y according to the second line -->
+            <set     id="set11" begin="move2.begin" attributeType="auto" attributeName="y" to="140" fill="freeze" />
+
+            <!-- set the y according to the third line -->
+            <set     id="set12" begin="move4.begin" attributeType="auto" attributeName="y" to="240" fill="freeze" />
+
+            <!-- set the y according to the third line -->
+            <set     id="set13" begin="move6.begin" attributeType="auto" attributeName="y" to="40" fill="freeze" />
+          </rect>
+
+          <!-- changing the width of this rectangle from 600 to 700 has a strange result -->
+          <!-- and I could NOT understand way! -->
+          <rect x="125" y="40" width="600" height="60" fill="#AAA">
+            <!-- set the y according to the second line -->
+            <set id="set21"   begin="move2.begin" attributeType="auto" attributeName="y" to="140" fill="freeze" />
+
+            <!-- set the y according to the third line -->
+            <set id="set22"   begin="move4.begin" attributeType="auto" attributeName="y" to="240" fill="freeze" />
+
+            <!-- set the y according to the third line -->
+            <set id="set23"   begin="move6.begin" attributeType="auto" attributeName="y" to="40" fill="freeze" />
+          </rect>
+          <!-- move to the right for line 1 -->
+          <animateTransform id="move1"  begin="blink1.end" attributeName="transform" type="translate" from="0,0" to="24,0"
+                            dur="0.10s" accumulate="sum" calcMode="discrete" repeatCount="18"  fill="freeze" />
+
+          <!-- move back to the left and prepare for line 2 -->
+          <animateTransform id="move2" begin="blink2.end" attributeName="transform" type="translate" from="456,0" to="0,0"  dur="0.10s" fill="freeze" />
+
+          <!-- move to the right for line 2-->
+          <animateTransform id="move3"  begin="blink3.end" attributeName="transform" type="translate" from="0,0" to="24,0"
+                            dur="0.10s" accumulate="sum" calcMode="discrete" repeatCount="25"  fill="freeze" />
+
+          <!-- move back to the left and prepare for line 3-->
+          <animateTransform id="move4" begin="blink4.end" attributeName="transform" type="translate" from="456,0" to="0,0"  dur="0.10s" fill="freeze" />
+
+          <!-- move to the right for line 3-->
+          <animateTransform id="move5"  begin="blink5.end" attributeName="transform" type="translate" from="0,0" to="24,0"
+                            dur="0.10s" accumulate="sum" calcMode="discrete" repeatCount="22"  fill="freeze" />
+
+          <!-- move back to the beginning for line 1-->
+          <animateTransform id="move6" begin="blink6.end" attributeName="transform" type="translate" from="456,0" to="0,0"  dur="0.10s" fill="freeze" />
+
+        </g>
+
+      </svg>
+
+    </div>
+    <br>
+    <hr>
+    <p>NOTE that it requires a monospace font-family.</p>
+    <p>It will be <strong>repeated</strong> automatically.</p>
+    <p>Time: 21s</p>
+
+</body>
+</html>
