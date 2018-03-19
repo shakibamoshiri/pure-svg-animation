@@ -33,6 +33,7 @@ Simple:
  - <a href="https://k-five.github.io/pure-svg-animation/owl/owl.html" target="_blank">owl</a>: `19s`
  - <a href="https://k-five.github.io/pure-svg-animation/uiux/draw-UIUX.html" target="_blank">draw-UIUX</a>: `20s`
  - <a href="https://k-five.github.io/pure-svg-animation/typewriter/typewriter.html" target="_blank">typewriter</a>: `21s`
+ - <a href="https://k-five.github.io/pure-svg-animation/heart-ECG/heart-ECG.html" target="_blank">heart-ECG</a>: `25s`
  - <a href="https://k-five.github.io/pure-svg-animation/fish-and-gull/fish-and-gull.html" target="_blank">fish-and-gull</a>: `27s`
  - <a href="https://k-five.github.io/pure-svg-animation/circles/circles.html" target="_blank">circles</a>: `28s`
  - <a href="https://k-five.github.io/pure-svg-animation/heart2/heart2.html" target="_blank">heart2</a>: `43s`

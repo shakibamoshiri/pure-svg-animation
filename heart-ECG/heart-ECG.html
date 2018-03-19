@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>heart-ECG</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="heart-ECG.css">
+  </head>
+  <body id="body">
+
+    <!-- Ignore This Part -->
+    <!-- <div id="center"> -->
+    <!--   <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"  id="svg" viewBox="-5 5 910 990"> -->
+    <!--     <g > -->
+    <!--       <path id="A" stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="1631" stroke-dashoffset="1630"  d="M250,100 375,0 500,125 500,250 250,500 0,250 0,125 125,0 250,100"> -->
+    <!--         <animate restart="whenNotActive" begin="play.click" id="A1" attributeType="XML" attributeName="stroke-dashoffset"  begin="0" to="-1631" dur="10s" fill="freeze" /> -->
+    <!--         <animate id="A2" attributeType="XML" attributeName="fill"  begin="A1.end+1" from="#AAA" to="#CB0000" dur="5s" fill="freeze" /> -->
+    <!--         <animate id="A3" attributeType="XML" attributeName="fill"  begin="A2.end" to="#AAA" from="#CB0000" dur="1s" end="draw.end" repeatCount="indefinite" /> -->
+    <!--         <animate id="A4" attributeType="XML" attributeName="fill"  begin="A3.end" from="#CB0000" to="#AAA" dur="1s" fill="freeze" /> -->
+    <!--       </path> -->
+    <!--     </g> -->
+    <!--   </svg> -->
+    <!-- </div> -->
+
+
+    <div id="center">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" preserveAspectRatio="xMinYMin meet" id="ECG">
+
+        <title>pure SVG animation: heart-ECG</title>
+        <desc>pure SVG animation: heart-ECG</desc>
+
+        <!-- <defs> -->
+        <!--   <pattern id="grid100" x="0" y="0" width="20%" height="20%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+        <!-- <defs> -->
+        <!--   <pattern id="grid25" x="0" y="0" width="5%" height="5%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+
+        <!-- <rect  x="0" y="0" width="500" height="500" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="500" height="500" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+
+        <!-- draw the heart -->
+        <path id="heart" stroke="#FFF" stroke-width="3"  fill="none" stroke-dasharray="683" stroke-dashoffset="683"  d="M250,250 l50,-50 l50,50 l0,75 l-100,75 l-100,-75 l0,-75 l50,-50 l50,50z">
+          <animate restart="whenNotActive" begin="play.click" id="A1" attributeType="XML" attributeName="stroke-dashoffset"  to="-683" dur="5s" fill="freeze" />
+          <animate id="A2" attributeType="XML" attributeName="fill"  begin="A1.end+1" from="#AAA" to="#CB0000" dur="5s" fill="freeze" />
+          <animate id="A3" attributeType="XML" attributeName="fill"  begin="A2.end" to="#AAA" from="#CB0000" dur="1s" end="draw.end" repeatCount="indefinite" />
+          <animate id="A4" attributeType="XML" attributeName="fill"  begin="A3.end" from="#CB0000" to="#AAA" dur="1s" fill="freeze" />
+        </path>
+
+        <!-- draw the ECG -->
+        <path id="B" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#FFF" stroke-width="3" stroke-dasharray="1519" stroke-dashoffset="1522" fill="none" d="M0,80 10,80 20,70 30,80 40,80 50,90 60,0 70,90 80,80 90,80 100,55 110,80 130,80 140,80 150,70 160,80 170,80 180,90 190,0 200,90 210,80 220,80 230,55 240,80 260,80 270,80 280,70 290,80 300,80 310,90 320,0 330,90 340,80 350,80 360,55 370,80 390,80 400,80 410,70 420,80 430,80 440,90 450,0 460,90 470,80 480,80 490,55 500,80 520,80 530,80 540,70 550,80 560,80 570,90 580,0">
+          <animate id="draw" attributeType="XML" id="animate-ECG" attributeName="stroke-dashoffset" begin="A2.end+1s" to="0" dur="4s" repeatCount="3"></animate>
+          <animate attributeType="XML" attributeName="stroke" begin="ECG.mousemove" from="#AAA" to="#CB0000" dur="1s" fill="freeze"></animate>
+        </path>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="480" stroke-dashoffset="480" d="M10,500 490,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="25s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="480" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <br>
+    <hr>
+    <p>For watching it over again click the <strong>play</strong> button.</p>
+    <p>Time: 25s</p>
+  </body>
+</html>
