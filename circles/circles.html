@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      circles
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="circles.css">
+
+  </head>
+  <body id="body">
+
+    <div  id="center">
+
+      <svg fill="#f0f" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"  id="svg" viewBox="-5 5 510 490">
+
+        <title>pure SVG animation: circles</title>
+        <desc>pure SVG animation: circles</desc>
+
+        <g id="A">
+          <path stroke="#FFF" stroke-width="10"  fill="none" stroke-dasharray="313" stroke-dashoffset="313"  d="M300,250 a50,50 0, 1,1 0,1">
+            <animate begin="play.click" id="A1" attributeType="XML" attributeName="stroke-dashoffset" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate id="A12" attributeType="XML" attributeName="stroke-dashoffset"  begin="X2.end" to="313" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#000" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M310,250 a40,40 0, 1,1 0,1">
+            <animate id="A2" attributeType="XML" attributeName="stroke-dashoffset"  begin="A1.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate id="A22" attributeType="XML" attributeName="stroke-dashoffset"  begin="A12.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#000" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M320,250 a30,30 0, 1,1 0,1">
+            <animate id="A3" attributeType="XML" attributeName="stroke-dashoffset"  begin="A2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="A22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#000" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M330,250 a20,20 0, 1,1 0,1">
+            <animate id="A4" attributeType="XML" attributeName="stroke-dashoffset"  begin="A2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="A22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#000" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M340,250 a10,10 0, 1,1 0,1">
+            <animate id="A5" attributeType="XML" attributeName="stroke-dashoffset"  begin="A2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate id="A55" attributeType="XML" attributeName="stroke-dashoffset"  begin="A22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <animateTransform id="M1" attributeType="XML" attributeName="transform" type="translate" begin="I1.end" from="0,0" to="-200,0" dur="4s" fill="freeze"/>
+        </g>
+
+        <g id="B">
+          <path stroke="#000" stroke-width="10"  fill="none" stroke-dasharray="313" stroke-dashoffset="313"  d="M100,250 a50,50 0, 1,1 0,1">
+            <animate begin="play.click" id="B1" attributeType="XML" attributeName="stroke-dashoffset" to="0" dur="3s" fill="freeze" />
+
+            <animate id="B12" attributeType="XML" attributeName="stroke-dashoffset"  begin="I2.end" to="313" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M110,250 a40,40 0, 1,1 0,1">
+            <animate id="B2" attributeType="XML" attributeName="stroke-dashoffset"  begin="B1.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate id="B22" attributeType="XML" attributeName="stroke-dashoffset"  begin="B12.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M120,250 a30,30 0, 1,1 0,1">
+            <animate id="B3" attributeType="XML" attributeName="stroke-dashoffset"  begin="B2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="B22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M130,250 a20,20 0, 1,1 0,1">
+            <animate id="B4" attributeType="XML" attributeName="stroke-dashoffset"  begin="B2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="B22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <path stroke="#FFF" stroke-width="10"  fill="none" stroke-dasharray="281" stroke-dashoffset="281"  d="M140,250 a10,10 0, 1,1 0,1">
+            <animate id="B5" attributeType="XML" attributeName="stroke-dashoffset"  begin="B2.end" to="0" dur="3s" fill="freeze" />
+            <!--reverse-->
+            <animate id="B55" attributeType="XML" attributeName="stroke-dashoffset"  begin="B22.end" to="281" dur="3s" fill="freeze" />
+          </path>
+
+          <animateTransform id="M2" attributeType="XML" attributeName="transform" type="translate" begin="X1.end" from="0,0" to="200,0" dur="4s" fill="freeze"/>
+        </g>
+
+        <g id="T">
+          <text x="320" y="270" fill="#AAA" font-size="50">UX
+            <animate id="I1" attributeType="XML" attributeName="fill" begin="A5.end+1" to="#FFF" dur="3s" fill="freeze" />
+
+            <animate id="I2" attributeType="XML" attributeName="fill" begin="M1.end" from="#FFF" to="#000" dur="1s" fill="freeze" />
+            <animate id="I3" attributeType="XML" attributeName="fill" begin="A55.end" from="#000" to="#AAA" dur="1s" fill="freeze" />
+          </text>
+
+          <text x="120" y="270" fill="#AAA" font-size="50">UI
+            <animate id="X1" attributeType="XML" attributeName="fill" begin="B5.end+1" to="#000" dur="3s" fill="freeze" />
+
+            <animate id="X2" attributeType="XML" attributeName="fill" begin="M2.end" to="#FFF" dur="1s" fill="freeze" />
+            <animate id="X3" attributeType="XML" attributeName="fill" begin="B55.end" from="#FFF" to="#AAA" dur="1s" fill="freeze" />
+          </text>
+        </g>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="480" stroke-dashoffset="480" d="M10,500 490,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="28s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="480" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <hr>
+
+    <p>For watching it over again click the <strong>play</strong> button.</p>
+    <p>Time: 28s</p>
+
+  </body>
+</html>
