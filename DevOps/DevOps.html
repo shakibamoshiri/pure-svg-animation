@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>DevOps</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="DevOps.css">
+  </head>
+  <body id="body">
+
+    <div id="center">
+      <svg  fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="650" height="500" >
+        <!--
+            First 8 arrows are drawn simultaneously and then they are filled
+            When they are filled, each corresponding text is appeared
+            Then stroke-width of all are set to 0 and
+            finally they rotate
+          -->
+
+        <title>pure SVG animation: DevOps</title>
+        <desc>pure SVG animation: DevOps</desc>
+
+        <!-- <defs> -->
+        <!--   <pattern id="grid100" x="0" y="0" width="14.28%" height="20%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+        <!-- <defs> -->
+        <!--   <pattern id="grid25" x="0" y="0" width="3.57%" height="5%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+
+        <!-- <rect  x="0" y="0" width="700" height="500" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="700" height="500" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+
+        <text id="DEV" x="164" y="218" font-size="40" fill="#000" >DEV</text>
+        <g id="left">
+          <!-- draw the heart -->
+          <!-- <path id="left3" stroke="#FF0" stroke-width="3"  stroke-dasharray="0" stroke-dashoffset="0"  d="M100,200 a100,100 0 1,1 0,1"></path> -->
+          <path id="left2" stroke="#F0F" stroke-width="0"  stroke-dasharray="0" stroke-dashoffset="0"  d="M80,200 a120,120 0 1,1 0,1z"></path>
+          <!-- <path id="left1" stroke="#0FF" stroke-width="3"  stroke-dasharray="0" stroke-dashoffset="0"  d="M50,200 a150,150 0 1,1 0,1"></path> -->
+
+          <path id="left_a" fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M50,200 a150,150 0 0,0 125,150 l25,-25 l-25,-25 a100,100 0 0,1 -75,-100 l-25,25z">
+            <animate id="step1" begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step2" begin="step1.end" attributeType="XML" attributeName="fill" from="#AAA" to="#009600" dur="1s" fill="freeze" />
+
+            <animate id="step10" begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="left_b" fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M200,350 a150,150 0 0,0 150,-125 l-25,-25 l-25,25 a100,100 0 0,1 -100,75 l25,25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step3" begin="step2.end" attributeType="XML" attributeName="fill" from="#AAA" to="#960096" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="left_c"  fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M350,200 a150,150 0 0,0 -125,-150 l-25,25 l25,25 a100,100 0 0,1 75,100 l25,-25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step4" begin="step3.end" attributeType="XML" attributeName="fill" from="#AAA" to="#009696" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="left_d" fill="none" stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M200,50 a150,150 0 0,0 -150,125 l25,25 l25,-25 a100,100 0 0,1 100,-75 l-25,-25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step5" begin="step4.end" attributeType="XML" attributeName="fill" from="#AAA" to="#969600" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <text fill="#FFF" font-family="monospace" font-size="23">
+            <textPath visibility="hidden" startOffset="7%"   xlink:href="#left2">Create
+              <set begin="step5.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <textPath visibility="hidden" startOffset="31%"  xlink:href="#left2">Package
+              <set begin="step4.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <textPath visibility="hidden" startOffset="58%"  xlink:href="#left2">Plan
+              <set begin="step3.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <textPath visibility="hidden"  startOffset="82%" xlink:href="#left2">Verify
+              <set begin="step2.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+          </text>
+
+          <animateTransform id="M1" begin="step10.end+0.5s" attributeType="XML" attributeName="transform" type="rotate" from="0,200,200" to="-360,200,200" dur="10s" repeatCount="1"/>
+        </g>
+
+        <text id="DEV" x="415" y="218" font-size="40" fill="#000" >OPS</text>
+        <g id="right">
+          <!-- <path id="right3" stroke="#FF0" stroke-width="3"  stroke-dasharray="0" stroke-dashoffset="0"  d="M350,200 a100,100 0 1,1 0,1"></path> -->
+          <path id="right2" visibility="hidden" stroke="#F0F" stroke-width="0"  stroke-dasharray="0" stroke-dashoffset="0"  d="M330,200 a120,120 0 1,1 0,1"></path>
+          <!-- <path id="right1" stroke="#0FF" stroke-width="3"  stroke-dasharray="0" stroke-dashoffset="0"  d="M300,200 a150,150 0 1,1 0,1"></path> -->
+
+          <path id="right_a"  fill="none" stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M600,200 a150,150 0 0,1 -125,150 l-25,-25 l25,-25 a100,100 0 0,0 75,-100 l25,25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step6" begin="step5.end" attributeType="XML" attributeName="fill" from="#AAA" to="#960000" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="right_b" fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M450,350 a150,150 0 0,1 -150,-125 l25,-25 l25,25 a100,100 0 0,0 100,75 l-25,25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step7" begin="step6.end" attributeType="XML" attributeName="fill" from="#AAA" to="#960096" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="right_c" fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M300,200 a150,150 0 0,1 125,-150 l25,25 l-25,25 a100,100 0 0,0 -75,100 l-25,-25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step8" begin="step7.end" attributeType="XML" attributeName="fill" from="#AAA" to="#000096" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <path id="right_d" fill="none"  stroke="#FFF" stroke-width="3"  stroke-dasharray="490" stroke-dashoffset="490"
+                d="M450,50 a150,150 0 0,1 150,125 l-25,25 l-25,-25 a100,100 0 0,0 -100,-75 l25,-25z">
+            <animate begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="5s" fill="freeze" />
+
+            <animate id="step9" begin="step8.end" attributeType="XML" attributeName="fill" from="#AAA" to="#FF8000" dur="1s" fill="freeze" />
+
+            <animate begin="step9.end+0.5s" attributeType="XML" attributeName="stroke-width" from="3" to="0" dur="1s" fill="freeze" />
+          </path>
+
+          <text fill="#FFF" font-family="monospace" font-size="23">
+            <textPath visibility="hidden" startOffset="6%"  xlink:href="#right2">Release
+              <set begin="step8.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <textPath visibility="hidden" startOffset="32%"  xlink:href="#right2">Monitor
+              <set begin="step9.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <!-- set starting -->
+            <textPath visibility="hidden" startOffset="55%"  xlink:href="#right2">Configure
+              <set begin="step6.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+
+            <textPath visibility="hidden" startOffset="84%"  xlink:href="#right2">Plan
+              <set begin="step7.end" attributeType="auto" attributeName="visibility" to="visible" />
+            </textPath>
+          </text>
+
+          <animateTransform id="M2" begin="step10.end+0.5s" attributeType="XML" attributeName="transform" type="rotate" from="0,450,200" to="360,450,200" dur="10s" repeatCount="1"/>
+        </g>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="630" stroke-dashoffset="630" d="M10,500 640,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="25s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="630" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <br>
+    <hr>
+    <p>For watching it over again <strong>refresh</strong> the page.</p>
+
+    <p>Time: 25s</p>
+  </body>
+</html>
