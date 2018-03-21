@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>spiral</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="drawing shapes in SVG and animate them with no CSS or Javascript. Pure SVG animation. Pure scalable Vector Graphic animation">
+    <meta name="keywords"    content="SVG, animation, animate, animate Motion, animate Transform,">
+    <meta name="author"      content="Shakiba Moshiri">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="spiral.css">
+  </head>
+  <body id="body">
+
+    <div id="center">
+      <svg  fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" >
+        <!--
+          -->
+
+        <title>pure SVG animation: spiral</title>
+        <desc>pure SVG animation: spiral</desc>
+
+        <!-- <defs> -->
+        <!--   <pattern id="grid100" x="0" y="0" width="20%" height="20%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="5" d="M0,100 100,100 100,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+        <!-- <defs> -->
+        <!--   <pattern id="grid25" x="0" y="0" width="5%" height="5%"> -->
+        <!--     <path fill="none" stroke="#000" stroke-width="1" d="M0,25 25,25 25,0" /> -->
+        <!--   </pattern> -->
+        <!-- </defs> -->
+
+        <!-- <rect  x="0" y="0" width="500" height="500" fill="url(#grid25)"> -->
+        <!-- </rect> -->
+        <!-- <rect  x="0" y="0" stroke="#000" stroke-width="5" width="500" height="500" fill="url(#grid100)"> -->
+        <!-- </rect> -->
+        <path id="spiral" stroke-dasharray="6434" stroke-dashoffset="6434" stroke="#FFF" stroke-width="2"
+              d="M250,250
+                 a5,5 0 1,1 10,0
+                 5,5 0 1,1 -15,0
+                 5,5 0 1,1 20,0
+                 5,5 0 1,1 -25,0
+                 5,5 0 1,1 30,0
+                 5,5 0 1,1 -35,0
+                 5,5 0 1,1 40,0
+                 5,5 0 1,1 -45,0
+                 5,5 0 1,1 50,0
+                 5,5 0 1,1 -55,0
+                 5,5 0 1,1 60,0
+                 5,5 0 1,1 -65,0
+                 5,5 0 1,1 70,0
+                 5,5 0 1,1 -75,0
+                 5,5 0 1,1 80,0
+                 5,5 0 1,1 -85,0
+                 5,5 0 1,1 90,0
+                 5,5 0 1,1 -95,0
+                 5,5 0 1,1 100,0
+                 5,5 0 1,1 -105,0
+                 5,5 0 1,1 110,0
+                 5,5 0 1,1 -115,0
+                 5,5 0 1,1 120,0
+                 5,5 0 1,1 -125,0
+                 5,5 0 1,1 130,0
+                 5,5 0 1,1 -135,0
+                 5,5 0 1,1 140,0
+                 5,5 0 1,1 -145,0
+                 5,5 0 1,1 150,0
+                 5,5 0 1,1 -155,0
+                 5,5 0 1,1 160,0
+                 5,5 0 1,1 -165,0
+                 5,5 0 1,1 170,0
+                 5,5 0 1,1 -175,0
+                 5,5 0 1,1 180,0
+                 5,5 0 1,1 -185,0
+                 5,5 0 1,1 190,0
+                 5,5 0 1,1 -195,0
+                 5,5 0 1,1 200,0
+                 ">
+          <animate id="step1" begin="play.click" attributeType="XML" attributeName="stroke-dashoffset"  to="0" dur="10s" fill="freeze" />
+          <animate id="step2" begin="step1.end+0.5s" attributeType="XML" attributeName="stroke-dasharray" to="0" dur="10s" fill="freeze" />
+          <animate id="step3" begin="step2.end+1s" attributeType="XML" attributeName="stroke-dasharray" to="1608" dur="10s" fill="freeze" />
+          <animate id="step4" begin="step3.end+0.5s" attributeType="XML" attributeName="stroke-dashoffset" to="6434" dur="10s" fill="freeze" />
+          <animate id="step5" begin="step4.end+0.5s" attributeType="XML" attributeName="stroke-dasharray" to="3217" dur="10s" fill="freeze" />
+          <animate id="step6" begin="step5.end+0.5s" attributeType="XML" attributeName="stroke-dasharray" to="6434" dur="10s" fill="freeze" />
+        </path>
+        <text x="196" y="270" font-size="60" fill="#AAA" >YOU</text>
+
+        <g id="play">
+          <path fill="#FFF" stroke="#000" stroke-width="3" d="M10,450 40,470 10,490 10,450 Z">
+            <animate attributeType="XML" attributeName="fill" begin="mouseover"  to="#CB0000" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill" begin="mouseout" to="#FFF" dur="0.5s" fill="freeze" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="click" to="0.0" dur="1s" repeatCount="indefinite" />
+            <animate attributeType="XML" attributeName="fill-opacity" begin="progress.end" to="1" dur="1s" fill="freeze" />
+          </path>
+          <set begin="mouseover" attributeType="auto" attributeName="cursor" to="pointer" />
+        </g>
+        <path  stroke="#CB0000" stroke-width="3" stroke-dasharray="480" stroke-dashoffset="480" d="M10,500 490,500">
+          <animate id="progress" attributeType="XML" attributeName="stroke-dashoffset"  begin="play.click" to="0" dur="63s" fill="freeze" />
+          <animate attributeType="XML" attributeName="stroke-dashoffset"  begin="progress.end+1" to="480" dur="1s" fill="freeze" />
+        </path>
+
+      </svg>
+    </div>
+
+    <br>
+    <hr>
+    <p>For watching it over click the <strong>play</strong> button.</p>
+    <p>Time: 63s</p>
+
+  </body>
+</html>
