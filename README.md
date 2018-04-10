@@ -1,30 +1,30 @@
-<ol>
-<li>
-</ol>
+
 <p align="center">
   <img src="svg/pure-svg-animation.svg" />
 </p>
-
-<img src="svg/hr.svg" />
+<br>
+<br>
 
 SVG animations without **CSS** nor **JS**; a silly or maybe crazy idea which came to my mind for some reasons.  
 I am still learning this technology, so you may see (for sure you will see) some mistakes in these samples.  
 Also these SVGs which you see them here, have been created using: <a href="https://github.com/k-five/badge-for-git">badge-for-git</a>.
 
-<img src="svg/hr.svg" />
-
+<br>
+<br>
 <p align="center">
   <img src="svg/prerequisite.svg" />
 </p>
+<br>
 
 The big one is try these samples on a **modern** web-browser which not only supports SVG but also <a href="https://en.wikipedia.org/wiki/Synchronized_Multimedia_Integration_Language">SMIL</a>. And  
 **IE** browser does not support it (= SMIL) for more see this page: <a href="https://www.siliconpublishing.com/blog/2015/12/the-fall-and-rise-of-svg">the fall and rise of SVG</a>
 
-<img src="svg/hr.svg" />
-
+<br>
+<br>
 <p align="center">
   <img src="svg/samples.svg" />
 </p>
+<br>
 
 ### In order of their time:  
 
@@ -51,17 +51,11 @@ Complex:
    - This is a sample of a simple Personal-Web-Page which can be all in SVG.  
    - Also you can see it here: <a href="http://k-five.ir" target="_blank">k-five.ir</a>
 
-<img src="svg/hr.svg" />
-
+<br>
+<br>
 <p align="center">
   <a href="https://github.com/k-five/badge-for-git">
     <img src="svg/made-for-you.svg" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/k-five/badge-for-git">
-    <img src="svg/line-5-500.svg" />
   </a>
 </p>
 
